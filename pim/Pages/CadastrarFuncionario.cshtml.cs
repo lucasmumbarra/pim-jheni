@@ -25,6 +25,11 @@ namespace pim.Pages
 
         public async Task<IActionResult> OnPostAsync()
         {
+            string submitButton = Request.Form["submitButton"];
+            if (submitButton == "Folha de Pagamento")
+            {
+                return RedirectToPage("./Home");
+            }
             return RedirectToPage("./Home");
         }
     }

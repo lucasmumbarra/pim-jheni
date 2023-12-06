@@ -138,29 +138,6 @@ namespace pim.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-        
-        [HttpPost]
-        public IActionResult Login(LoginUsuarioModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                var usuario = _context.LoginUsuario
-                    .SingleOrDefault(u => u.Login == model.Login && u.Senha == model.Senha);
-
-                if (usuario != null)
-                {
-                    return RedirectToAction("PaginaInicial", "Home");
-                }
-                else
-                {
-                    ModelState.AddModelError(string.Empty, "Login ou senha inválidos.");
-                    return View("Index", model);
-                }
-            }
-
-            return View("Index", model);
-        }
-
 
         private bool LoginUsuarioExists(int id)
         {

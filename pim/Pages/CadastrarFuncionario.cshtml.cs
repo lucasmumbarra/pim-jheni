@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using pim.Data;
 using pim.Models;
+using pim.Models.Pages;
 
 namespace pim.Pages
 {
@@ -20,19 +21,11 @@ namespace pim.Pages
         }
 
         [BindProperty]
-        public LoginUsuario LoginUsuario { get; set; } = default!;
+        public PageCadastroFuncionario PageCadastroFuncionario { get; set; } = default!;
 
         public async Task<IActionResult> OnPostAsync()
         {
-
-            var auth = await _context.LoginUsuario.FirstOrDefaultAsync(x => x.Login == LoginUsuario.Login && x.Senha == LoginUsuario.Senha);
-
-            if (auth == null)
-            {
-                return Page();
-            }
-
-            return RedirectToPage("./Create");
+            return RedirectToPage("./Home");
         }
     }
 }

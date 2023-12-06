@@ -1,0 +1,373 @@
+﻿@page
+@model pim.Pages.FolhaPagamentoModel
+
+
+ <style>
+  /* Estilos para os parágrafos */
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url("./PaytechFolha.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #sap img {
+    width: 100%;
+  }
+
+  .yellow-bg {
+    background-color: yellow;
+    padding: 0.625em;
+  }
+
+  .white-bg {
+    background-color: white;
+    color: #333;
+    padding: 0.625em;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin-left: 0em;
+  }
+
+  /* Estilos para o formulário */
+  .left-column {
+    width: 49%;
+    position: relative;
+  }
+
+  .right-column {
+    width: 49%;
+    border-radius: 0.188em;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.313em;
+    text-align: left;
+  }
+
+  .form-label {
+    font-weight: bold;
+  }
+
+  .form-input {
+    width: 100%;
+    padding: 0.25em;
+    margin-bottom: 0.625em;
+    border: 0.063em solid #ccc;
+    border-radius: 0.063em;
+  }
+
+  /* Quadrado transparente */
+  .form-wrapper {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 1.25em;
+    border-radius: 1.25em;
+  }
+
+  .form-submit {
+    width: 100%;
+    background-color: #d18d6d;
+    color: white;
+    padding: 0.313em 0.125em;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .form-reducao {
+    font-size: 20px;
+    /* Tamanho de fonte base para o texto */
+    transform: scale(0.8);
+    /* Reduz o tamanho geral em 80% (ajuste conforme necessário) */
+  }
+
+  .container2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.25em;
+    margin-top: -3.125em;
+    position: relative;
+    object-fit: cover;
+    margin-top: 6em;
+  }
+
+  .form-submit2 {
+    width: 30%;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(255, 196, 0);
+    padding: 0.313em 0.125em;
+    border: 0.125em solid rgb(255, 255, 255);
+    cursor: pointer;
+    animation: pulse 2s infinite;
+  }
+
+  .navbar {
+    position: fixed;
+    /* Fixa a barra de navegação no topo */
+    top: 0;
+    /* Coloca a barra de navegação no topo da janela */
+    width: 100%;
+    /* Largura total da janela */
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Cor de fundo da barra de navegação */
+    /* Outros estilos necessários para a barra de navegação */
+  }
+
+  /* Estilos específicos para a tela 2 */
+  #tela2 {
+    background-color: gray;
+    padding: 1em 0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+  #tela2web {
+    background-color: gray;
+    padding: 1em 0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Barra de Pesquisa */
+
+  #search-container {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    background: rgba(
+      255,
+      255,
+      255,
+      0.2
+    ); /* Cor de fundo da barra de pesquisa */
+    border-radius: 10px; /* Borda arredondada */
+    padding: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    max-height: 50px;
+    max-width: 200px;
+  }
+
+  #search-box {
+    width: 125px;
+    padding: 0px;
+    border: none;
+    border-radius: 15px; /* Borda arredondada */
+    background: transparent;
+    outline: none;
+  }
+
+  #search-icon {
+    margin-left: 5px;
+    cursor: pointer;
+  }
+</style>
+
+<section id="formulario">
+  <div class="form-container">
+    <form id="myForm">
+      <div
+        class="form-row"
+        style="margin-left: 0em; margin-top: 13em; width: 21.8em"
+      >
+        <input class="form-submit" type="button" value="Voltar" />
+      </div>
+
+      <div class="form-row" style="margin-left: 25em; margin-top: -5.5em">
+        <label
+          class="form-label"
+          for="email"
+          style="color: #f77032; margin-left: 0em"
+          >Email</label
+        >
+        <input
+          class="form-input"
+          type="text"
+          id="email"
+          name="email"
+          required
+          style="width: 27.2em; border-radius: 0.3em"
+        />
+      </div>
+
+      <div
+        class="form-row"
+        style="margin-left: 62.5em; margin-top: -2.7em; width: 15em"
+      >
+        <input class="form-submit" type="button" value="Gerar Folha" />
+      </div>
+
+      <!-- Folha de pagamento torre -->
+
+      <div class="form-row" style="margin-left: 25em; margin-top: 3.5em">
+        <label
+          class="form-label"
+          for="nome"
+          style="color: #f77032; margin-left: 0em"
+          >Nome</label
+        >
+        <input
+          class="form-input"
+          type="text"
+          id="nome"
+          name="nome"
+          required
+          style="width: 17em; border-radius: 0.3em"
+        />
+      </div>
+
+      <div class="form-row" style="margin-left: 25em; margin-top: 1.5em">
+        <label
+          class="form-label"
+          for="faltas"
+          style="color: #f77032; margin-left: 0em"
+          >Faltas</label
+        >
+        <input
+          class="form-input"
+          type="text"
+          id="faltas"
+          name="faltas"
+          required
+          style="width: 17em; border-radius: 0.3em"
+        />
+      </div>
+
+      <div class="form-row" style="margin-left: 25em; margin-top: 1.5em">
+        <label
+          class="form-label"
+          for="inss"
+          style="color: #f77032; margin-left: 0em"
+          >INSS</label
+        >
+        <input
+          class="form-input"
+          type="text"
+          id="inss"
+          name="inss"
+          required
+          style="width: 17em; border-radius: 0.3em"
+        />
+      </div>
+
+      <!-- Folha de pagamento seg torre -->
+
+      <div class="form-row" style="margin-left: 44.5em; margin-top: -13.35em">
+        <label
+          class="form-label"
+          for="salario"
+          style="color: #f77032; margin-left: 0em"
+          >Salario</label
+        >
+        <input
+          class="form-input"
+          type="text"
+          id="salario"
+          name="salario"
+          required
+          style="width: 17em; border-radius: 0.3em"
+        />
+      </div>
+
+      <div class="form-row" style="margin-left: 44.5em; margin-top: 1.5em">
+        <label
+          class="form-label"
+          for="atestado"
+          style="color: #f77032; margin-left: 0em"
+          >Atestado</label
+        >
+        <input
+          class="form-input"
+          type="text"
+          id="atestado"
+          name="atestado"
+          required
+          style="width: 17em; border-radius: 0.3em"
+        />
+      </div>
+
+      <div class="form-row" style="margin-left: 44.5em; margin-top: 1.5em">
+        <label
+          class="form-label"
+          for="ferias"
+          style="color: #f77032; margin-left: 0em"
+          >Férias</label
+        >
+        <input
+          class="form-input"
+          type="text"
+          id="ferias"
+          name="ferias"
+          required
+          style="width: 17em; border-radius: 0.3em"
+        />
+      </div>
+
+      <!-- Folha de pagamento ter torre -->
+
+      <div class="form-row" style="margin-left: 64em; margin-top: -13.35em">
+        <label
+          class="form-label"
+          for="atrasos"
+          style="color: #f77032; margin-left: 0em"
+          >Atrasos</label
+        >
+        <input
+          class="form-input"
+          type="text"
+          id="atrasos"
+          name="atrasos"
+          required
+          style="width: 17em; border-radius: 0.3em"
+        />
+      </div>
+
+      <div class="form-row" style="margin-left: 64em; margin-top: 1.5em">
+        <label
+          class="form-label"
+          for="beneficios"
+          style="color: #f77032; margin-left: 0em"
+          >Beneficios</label
+        >
+        <input
+          class="form-input"
+          type="text"
+          id="beneficios"
+          name="beneficios"
+          required
+          style="width: 17em; border-radius: 0.3em"
+        />
+      </div>
+
+      <div class="form-row" style="margin-left: 64em; margin-top: 1.5em">
+        <label
+          class="form-label"
+          for="decimoSalario"
+          style="color: #f77032; margin-left: 0em"
+          >13º Salario</label
+        >
+        <input
+          class="form-input"
+          type="text"
+          id="decimoSalario"
+          name="decimoSalario"
+          required
+          style="width: 17em; border-radius: 0.3em"
+        />
+      </div>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pim", "pim\pim.csproj", "{C20F3D9B-891A-4990-8435-FCECBA1F4B8D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C20F3D9B-891A-4990-8435-FCECBA1F4B8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C20F3D9B-891A-4990-8435-FCECBA1F4B8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C20F3D9B-891A-4990-8435-FCECBA1F4B8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C20F3D9B-891A-4990-8435-FCECBA1F4B8D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BCA364DC-B25C-44AF-8450-AB5A549986D4}
+	EndGlobalSection
+EndGlobal

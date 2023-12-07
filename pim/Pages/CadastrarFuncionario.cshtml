@@ -174,7 +174,7 @@
                 <label class="form-label"
                        for="nome"
                        style="color: var(--bs-light); margin-top: 5em; margin-left: 0em">Nome</label>
-                <input class="form-input"
+                <input asp-for="pageCadastroFuncionario.Nome" class="form-input"
                        type="text"
                        id="nome"
                        name="nome"
@@ -185,7 +185,7 @@
                 <label class="form-label"
                        for="nome"
                        style="color: rgb(0, 0, 0); margin-left: 0em">Data de Nascimento</label>
-                <input class="form-input"
+                <input asp-for="pageCadastroFuncionario.DataNascimento" class="form-input"
                        type="text"
                        id="nome"
                        name="nome"
@@ -193,7 +193,7 @@
             </div>
 
             <div class="form-row" style="margin-left: 28em">
-                <label class="form-label"
+                <label asp-for="pageCadastroFuncionario.Genero" class="form-label"
                        for="nome"
                        style="color: rgb(0, 0, 0); margin-left: 0em">Gênero</label>
                 <input class="form-input"
@@ -207,7 +207,7 @@
                 <label class="form-label"
                        for="nome"
                        style="color: rgb(0, 0, 0); margin-left: 0em">RG</label>
-                <input class="form-input"
+                <input asp-for="pageCadastroFuncionario.Rg" class="form-input"
                        type="text"
                        id="nome"
                        name="nome"
@@ -220,7 +220,7 @@
                 <label class="form-label"
                        for="nome"
                        style="color: var(--bs-light); margin-left: 0em">CPF</label>
-                <input class="form-input"
+                <input asp-for="pageCadastroFuncionario.Cpf" class="form-input"
                        type="text"
                        id="nome"
                        name="nome"
@@ -231,7 +231,7 @@
                 <label class="form-label"
                        for="nome"
                        style="color: rgb(0, 0, 0); margin-left: 0em">Email</label>
-                <input class="form-input"
+                <input asp-for="pageCadastroFuncionario.Email" class="form-input"
                        type="text"
                        id="nome"
                        name="nome"
@@ -242,7 +242,7 @@
                 <label class="form-label"
                        for="nome"
                        style="color: rgb(0, 0, 0); margin-left: 0em">Estado civil</label>
-                <input class="form-input"
+                <input asp-for="pageCadastroFuncionario.EstadoCivil" class="form-input"
                        type="text"
                        id="nome"
                        name="nome"
@@ -253,7 +253,7 @@
                 <label class="form-label"
                        for="nome"
                        style="color: rgb(0, 0, 0); margin-left: 0em">Telefone</label>
-                <input class="form-input"
+                <input asp-for="pageCadastroFuncionario.Telefone" class="form-input"
                        type="text"
                        id="nome"
                        name="nome"
@@ -266,7 +266,7 @@
                 <label class="form-label"
                        for="nome"
                        style="color: var(--bs-light); margin-left: 0em">Cargo</label>
-                <input class="form-input"
+                <input asp-for="pageCadastroFuncionario.Cargo" class="form-input"
                        type="text"
                        id="nome"
                        name="nome"
@@ -277,7 +277,7 @@
                 <label class="form-label"
                        for="nome"
                        style="color: rgb(0, 0, 0); margin-left: 0em">Salário</label>
-                <input class="form-input"
+                <input asp-for="pageCadastroFuncionario.Salario" class="form-input"
                        type="text"
                        id="nome"
                        name="nome"
@@ -287,6 +287,7 @@
             <div class="form-row" style="margin-left: 68em; margin-top: 1.4em">
                 <input class="form-submit"
                        type="submit"
+                       name="submitCreateButton"
                        value="Cadastro"
                        style="width: 15.8em; border-radius: 0.3em" />
             </div>
@@ -307,7 +308,7 @@
                 <label class="form-label"
                        for="nome"
                        style="color: var(--bs-light); margin-left: 0em">CEP</label>
-                <input class="form-input"
+                <input asp-for="pageCadastroFuncionario.Cep" class="form-input"
                        type="text"
                        id="nome"
                        name="nome"
@@ -318,7 +319,7 @@
                 <label class="form-label"
                        for="nome"
                        style="color: rgb(0, 0, 0); margin-left: 0em">Bairro</label>
-                <input class="form-input"
+                <input asp-for="pageCadastroFuncionario.Bairro" class="form-input"
                        type="text"
                        id="nome"
                        name="nome"
@@ -331,7 +332,7 @@
                 <label class="form-label"
                        for="nome"
                        style="color: var(--bs-light); margin-left: 0em">Cidade</label>
-                <input class="form-input"
+                <input asp-for="pageCadastroFuncionario.Cidade" class="form-input"
                        type="text"
                        id="nome"
                        name="nome"
@@ -342,7 +343,7 @@
                 <label class="form-label"
                        for="nome"
                        style="color: rgb(0, 0, 0); margin-left: 0em">Endereço</label>
-                <input class="form-input"
+                <input asp-for="pageCadastroFuncionario.Endereco" class="form-input"
                        type="text"
                        id="nome"
                        name="nome"
@@ -353,7 +354,7 @@
                 <label class="form-label"
                        for="nome"
                        style="color: rgb(0, 0, 0); margin-left: 0em">Complemento</label>
-                <input class="form-input"
+                <input asp-for="pageCadastroFuncionario.Complemento" class="form-input"
                        type="text"
                        id="nome"
                        name="nome"
@@ -365,8 +366,8 @@
             <div class="form-row" style="margin-left: 68em; margin-top: -10.5em">
                 <label class="form-label"
                        for="nome"
-                       style="color: var(--bs-light); margin-left: 0em">Cidade</label>
-                <input class="form-input"
+                       style="color: var(--bs-light); margin-left: 0em">Estado</label>
+                <input asp-for="pageCadastroFuncionario.Estado" class="form-input"
                        type="text"
                        id="nome"
                        name="nome"
@@ -376,8 +377,8 @@
             <div class="form-row" style="margin-left: 68em">
                 <label class="form-label"
                        for="nome"
-                       style="color: rgb(0, 0, 0); margin-left: 0em">Endereço</label>
-                <input class="form-input"
+                       style="color: rgb(0, 0, 0); margin-left: 0em">País</label>
+                <input asp-for="pageCadastroFuncionario.Pais" class="form-input"
                        type="text"
                        id="nome"
                        name="nome"

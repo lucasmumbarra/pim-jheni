@@ -202,6 +202,8 @@ body {
     -webkit-tap-highlight-color: transparent;
 }
 
+
+
 hr {
     margin: 1rem 0;
     color: inherit;
@@ -13898,6 +13900,16 @@ fieldset:disabled .btn {
 /* Adicione essas regras de estilo ao seu CSS existente */
 .form-container {
     position: relative;
+    display: flex;
+    margin-top: 20em;
+    margin-left: 3em;
+}
+
+.form-container2 {
+    position: relative;
+    display: flex;
+    margin-top: 20em;
+    margin-left: 3em;
 }
 
 .form-header {

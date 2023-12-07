@@ -40,7 +40,7 @@ namespace pim.Pages
                 Fp.Nome = cf.Nome;
                 Fp.Salario = salario.ValorSalario;
                 Fp.Faltas = "0";
-                Fp.INSS = Math.Round((salario.ValorSalario / 100) * decimal.Parse("11.28")).ToString();
+                Fp.INSS = Math.Round((salario.ValorSalario / 100) * decimal.Parse("11.28"), 2).ToString("N2", new System.Globalization.CultureInfo("pt-BR"));
                 Fp.Atestado = "0";
                 Fp.Ferias = "0";
                 Fp.Atrasos = "0";

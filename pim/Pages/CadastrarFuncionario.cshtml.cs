@@ -67,7 +67,17 @@ namespace pim.Pages
 
                 if (func.Id != null)
                 {
-                    
+                    Funcionario funcionario = new Funcionario();
+                    funcionario.CadastroFuncionarioId = func.Id;
+                    funcionario.EnderecoId = endereco.Id;
+                    funcionario.CargoId = cargo.Id;
+                    funcionario.GeneroId = genero.Id;
+                    funcionario.ContaBancariaId = 1;
+                    funcionario.DependenteId = 1;
+                    funcionario.SalarioId = 1;
+
+                    _context.Add(funcionario);
+                    await _context.SaveChangesAsync();
 
                     return RedirectToPage("./Home");
                 }

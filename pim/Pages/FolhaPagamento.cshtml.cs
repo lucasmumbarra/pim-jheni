@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using pim.Data;
 using pim.Models;
+using pim.Models.Pages;
 
 namespace pim.Pages
 {
@@ -20,15 +21,28 @@ namespace pim.Pages
         }
 
         [BindProperty]
-        public LoginUsuario LoginUsuario { get; set; } = default!;
+        public PageFp Fp { get; set; } = default!;
 
         public async Task<IActionResult> OnPostAsync()
         {
-            string submitButton = Request.Form["submitCreateButton"];
+            string submitButton = Request.Form["submitFpButton"];
 
             if (submitButton == "Voltar")
             {
                 return RedirectToPage("./Home");
+            }
+
+            if (submitButton == "Gerar Folha")
+            {
+                Fp.Nome = "teste";
+                Fp.Salario = decimal.Parse("0.00");
+                Fp.Faltas = "teste";
+                Fp.INSS = "teste";
+                Fp.Atestado = "teste";
+                Fp.Ferias = "teste";
+                Fp.Atrasos = "teste";
+                Fp.Beneficios = "teste";
+                Fp.DecimoSalario = "teste";
             }
 
             return Page();

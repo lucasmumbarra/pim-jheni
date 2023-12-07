@@ -20,6 +20,8 @@ namespace pim.Data
         public DbSet<Genero> Genero { get; set; } = default!;
         public DbSet<Endereco> Endereco { get; set; } = default!;
         public DbSet<Funcionario> Funcionario { get; set; } = default!;
+        public DbSet<FolhaPagamento> FolhaPagamento { get; set; } = default!;
+        public DbSet<Lancamento> Lancamento { get; set; } = default!;
 
     }
 }

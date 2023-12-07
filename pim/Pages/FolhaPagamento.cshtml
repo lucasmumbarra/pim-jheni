@@ -177,187 +177,71 @@
 </style>
 
 <section id="formulario">
-  <div class="form-container">
-    <form id="myForm" method="post">
-      <div
-        class="form-row"
-        style="margin-left: 0em; margin-top: 13em; width: 21.8em"
-      >
-        <input class="form-submit" type="submit" name="submitFpButton" value="Voltar" asp-page="/Home" />
-      </div>
+    <div class="form-container">
+        <form id="myForm" method="post">
+            <div class="form-row" style="margin-left: 0em; margin-top: 13em; width: 21.8em">
+                <input class="form-submit" type="submit" name="submitFpButton" value="Voltar" asp-page="/Home" />
+            </div>
 
-      <div class="form-row" style="margin-left: 25em; margin-top: -5.5em">
-        <label
-          class="form-label"
-          for="email"
-          style="color: #f77032; margin-left: 0em"
-          >Email</label
-        >
-        <input
-          class="form-input"
-          type="text"
-          id="email"
-          name="email"
-          style="width: 27.2em; border-radius: 0.3em"
-        />
-      </div>
+            <div class="form-row" style="margin-left: 25em; margin-top: -5.5em">
+                <label class="form-label" asp-for="Fp.Email" style="color: #f77032; margin-left: 0em">Email</label>
+                <input class="form-input" type="text" id="email" asp-for="Fp.Email" style="width: 27.2em; border-radius: 0.3em" />
+            </div>
 
-      <div
-        class="form-row"
-        style="margin-left: 62.5em; margin-top: -2.7em; width: 15em"
-      >
-        <input class="form-submit" type="button" value="Gerar Folha" />
-      </div>
+            <div class="form-row" style="margin-left: 62.5em; margin-top: -2.7em; width: 15em">
+                <input class="form-submit" type="submit" name="submitFpButton" value="Gerar Folha" />
+            </div>
 
-      <!-- Folha de pagamento torre -->
+            <!-- Folha de pagamento torre -->
 
-      <div class="form-row" style="margin-left: 25em; margin-top: 3.5em">
-        <label
-          class="form-label"
-          for="nome"
-          style="color: #f77032; margin-left: 0em"
-          >Nome</label
-        >
-        <input
-          class="form-input"
-          type="text"
-          id="nome"
-          name="nome"
-          style="width: 17em; border-radius: 0.3em"
-        />
-      </div>
+            <div class="form-row" style="margin-left: 25em; margin-top: 3.5em">
+                <label class="form-label" asp-for="Fp.Nome" style="color: #f77032; margin-left: 0em">Nome</label>
+                <input class="form-input" type="text" asp-for="Fp.Nome" style="width: 17em; border-radius: 0.3em" value="@Model.Fp.Nome" />
+            </div>
 
-      <div class="form-row" style="margin-left: 25em; margin-top: 1.5em">
-        <label
-          class="form-label"
-          for="faltas"
-          style="color: #f77032; margin-left: 0em"
-          >Faltas</label
-        >
-        <input
-          class="form-input"
-          type="text"
-          id="faltas"
-          name="faltas"
-          style="width: 17em; border-radius: 0.3em"
-        />
-      </div>
+            <div class="form-row" style="margin-left: 25em; margin-top: 1.5em">
+                <label class="form-label" asp-for="Fp.Faltas" style="color: #f77032; margin-left: 0em">Faltas</label>
+                <input class="form-input" type="text" asp-for="Fp.Faltas" style="width: 17em; border-radius: 0.3em" value="@Model.Fp.Nome" />
+            </div>
 
-      <div class="form-row" style="margin-left: 25em; margin-top: 1.5em">
-        <label
-          class="form-label"
-          for="inss"
-          style="color: #f77032; margin-left: 0em"
-          >INSS</label
-        >
-        <input
-          class="form-input"
-          type="text"
-          id="inss"
-          name="inss"
-          style="width: 17em; border-radius: 0.3em"
-        />
-      </div>
+            <div class="form-row" style="margin-left: 25em; margin-top: 1.5em">
+                <label class="form-label" asp-for="Fp.INSS" style="color: #f77032; margin-left: 0em">INSS</label>
+                <input class="form-input" type="text" asp-for="Fp.INSS" style="width: 17em; border-radius: 0.3em" />
+            </div>
 
-      <!-- Folha de pagamento seg torre -->
+            <!-- Folha de pagamento seg torre -->
 
-      <div class="form-row" style="margin-left: 44.5em; margin-top: -13.35em">
-        <label
-          class="form-label"
-          for="salario"
-          style="color: #f77032; margin-left: 0em"
-          >Salario</label
-        >
-        <input
-          class="form-input"
-          type="text"
-          id="salario"
-          name="salario"
-          style="width: 17em; border-radius: 0.3em"
-        />
-      </div>
+            <div class="form-row" style="margin-left: 44.5em; margin-top: -13.35em">
+                <label class="form-label" asp-for="Fp.Salario" style="color: #f77032; margin-left: 0em">Salario</label>
+                <input class="form-input" type="text" asp-for="Fp.Salario" style="width: 17em; border-radius: 0.3em" />
+            </div>
 
-      <div class="form-row" style="margin-left: 44.5em; margin-top: 1.5em">
-        <label
-          class="form-label"
-          for="atestado"
-          style="color: #f77032; margin-left: 0em"
-          >Atestado</label
-        >
-        <input
-          class="form-input"
-          type="text"
-          id="atestado"
-          name="atestado"
-          style="width: 17em; border-radius: 0.3em"
-        />
-      </div>
+            <div class="form-row" style="margin-left: 44.5em; margin-top: 1.5em">
+                <label class="form-label" asp-for="Fp.Atestado" style="color: #f77032; margin-left: 0em">Atestado</label>
+                <input class="form-input" type="text" asp-for="Fp.Atestado" style="width: 17em; border-radius: 0.3em" />
+            </div>
 
-      <div class="form-row" style="margin-left: 44.5em; margin-top: 1.5em">
-        <label
-          class="form-label"
-          for="ferias"
-          style="color: #f77032; margin-left: 0em"
-          >Férias</label
-        >
-        <input
-          class="form-input"
-          type="text"
-          id="ferias"
-          name="ferias"
-          style="width: 17em; border-radius: 0.3em"
-        />
-      </div>
+            <div class="form-row" style="margin-left: 44.5em; margin-top: 1.5em">
+                <label class="form-label" asp-for="Fp.Ferias" style="color: #f77032; margin-left: 0em">Férias</label>
+                <input class="form-input" type="text" asp-for="Fp.Ferias" style="width: 17em; border-radius: 0.3em" />
+            </div>
 
-      <!-- Folha de pagamento ter torre -->
+            <!-- Folha de pagamento ter torre -->
 
-      <div class="form-row" style="margin-left: 64em; margin-top: -13.35em">
-        <label
-          class="form-label"
-          for="atrasos"
-          style="color: #f77032; margin-left: 0em"
-          >Atrasos</label
-        >
-        <input
-          class="form-input"
-          type="text"
-          id="atrasos"
-          name="atrasos"
-          style="width: 17em; border-radius: 0.3em"
-        />
-      </div>
+            <div class="form-row" style="margin-left: 64em; margin-top: -13.35em">
+                <label class="form-label" asp-for="Fp.Atrasos" style="color: #f77032; margin-left: 0em">Atrasos</label>
+                <input class="form-input" type="text" asp-for="Fp.Atrasos" style="width: 17em; border-radius: 0.3em" />
+            </div>
 
-      <div class="form-row" style="margin-left: 64em; margin-top: 1.5em">
-        <label
-          class="form-label"
-          for="beneficios"
-          style="color: #f77032; margin-left: 0em"
-          >Beneficios</label
-        >
-        <input
-          class="form-input"
-          type="text"
-          id="beneficios"
-          name="beneficios"
-          style="width: 17em; border-radius: 0.3em"
-        />
-      </div>
+            <div class="form-row" style="margin-left: 64em; margin-top: 1.5em">
+                <label class="form-label" asp-for="Fp.Beneficios" style="color: #f77032; margin-left: 0em">Beneficios</label>
+                <input class="form-input" type="text" asp-for="Fp.Beneficios" style="width: 17em; border-radius: 0.3em" />
+            </div>
 
-      <div class="form-row" style="margin-left: 64em; margin-top: 1.5em">
-        <label
-          class="form-label"
-          for="decimoSalario"
-          style="color: #f77032; margin-left: 0em"
-          >13º Salario</label
-        >
-        <input
-          class="form-input"
-          type="text"
-          id="decimoSalario"
-          name="decimoSalario"
-          style="width: 17em; border-radius: 0.3em"
-        />
-      </div>
-    </form>
-  </div>
+            <div class="form-row" style="margin-left: 64em; margin-top: 1.5em">
+                <label class="form-label" asp-for="Fp.DecimoSalario" style="color: #f77032; margin-left: 0em">13º Salario</label>
+                <input class="form-input" type="text" asp-for="Fp.DecimoSalario" style="width: 17em; border-radius: 0.3em" />
+            </div>
+        </form>
+    </div>
 </section>

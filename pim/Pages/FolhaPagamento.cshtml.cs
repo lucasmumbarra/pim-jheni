@@ -24,15 +24,14 @@ namespace pim.Pages
 
         public async Task<IActionResult> OnPostAsync()
         {
+            string submitButton = Request.Form["submitCreateButton"];
 
-            var auth = await _context.LoginUsuario.FirstOrDefaultAsync(x => x.Login == LoginUsuario.Login && x.Senha == LoginUsuario.Senha);
-
-            if (auth == null)
+            if (submitButton == "Voltar")
             {
-                return Page();
+                return RedirectToPage("./Home");
             }
 
-            return RedirectToPage("./Create");
+            return Page();
         }
     }
 }

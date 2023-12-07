@@ -168,324 +168,222 @@
 </style>
 
 <section id="formulario">
-  <div class="form-container">
-    <div class="form-row" style="margin-left: 28em">
-      <label
-        class="form-label"
-        for="nome"
-        style="color: var(--bs-light); margin-top: 5em; margin-left: 0em"
-        >Nome</label
-      >
-      <input
-        class="form-input"
-        type="text"
-        id="nome"
-        name="nome"
-        required
-        style="width: 15em; border-radius: 0.3em"
-      />
+    <div class="form-container">
+        <form id="myForm" method="post">
+            <div class="form-row" style="margin-left: 28em">
+                <label class="form-label"
+                       for="nome"
+                       style="color: var(--bs-light); margin-top: 5em; margin-left: 0em">Nome</label>
+                <input class="form-input"
+                       type="text"
+                       id="nome"
+                       name="nome"
+                       style="width: 15em; border-radius: 0.3em" />
+            </div>
+
+            <div class="form-row" style="margin-left: 28em">
+                <label class="form-label"
+                       for="nome"
+                       style="color: rgb(0, 0, 0); margin-left: 0em">Data de Nascimento</label>
+                <input class="form-input"
+                       type="text"
+                       id="nome"
+                       name="nome"
+                       style="width: 15em; border-radius: 0.3em" />
+            </div>
+
+            <div class="form-row" style="margin-left: 28em">
+                <label class="form-label"
+                       for="nome"
+                       style="color: rgb(0, 0, 0); margin-left: 0em">Gênero</label>
+                <input class="form-input"
+                       type="text"
+                       id="nome"
+                       name="nome"
+                       style="width: 15em; border-radius: 0.3em" />
+            </div>
+
+            <div class="form-row" style="margin-left: 28em">
+                <label class="form-label"
+                       for="nome"
+                       style="color: rgb(0, 0, 0); margin-left: 0em">RG</label>
+                <input class="form-input"
+                       type="text"
+                       id="nome"
+                       name="nome"
+                       style="width: 15em; border-radius: 0.3em" />
+            </div>
+
+            <!--Segundo bloco de cod-->
+
+            <div class="form-row" style="margin-left: 48em; margin-top: -13.8em">
+                <label class="form-label"
+                       for="nome"
+                       style="color: var(--bs-light); margin-left: 0em">CPF</label>
+                <input class="form-input"
+                       type="text"
+                       id="nome"
+                       name="nome"
+                       style="width: 15em; border-radius: 0.3em" />
+            </div>
+
+            <div class="form-row" style="margin-left: 48em">
+                <label class="form-label"
+                       for="nome"
+                       style="color: rgb(0, 0, 0); margin-left: 0em">Email</label>
+                <input class="form-input"
+                       type="text"
+                       id="nome"
+                       name="nome"
+                       style="width: 15em; border-radius: 0.3em" />
+            </div>
+
+            <div class="form-row" style="margin-left: 48em">
+                <label class="form-label"
+                       for="nome"
+                       style="color: rgb(0, 0, 0); margin-left: 0em">Estado civil</label>
+                <input class="form-input"
+                       type="text"
+                       id="nome"
+                       name="nome"
+                       style="width: 15em; border-radius: 0.3em" />
+            </div>
+
+            <div class="form-row" style="margin-left: 48em">
+                <label class="form-label"
+                       for="nome"
+                       style="color: rgb(0, 0, 0); margin-left: 0em">Telefone</label>
+                <input class="form-input"
+                       type="text"
+                       id="nome"
+                       name="nome"
+                       style="width: 15em; border-radius: 0.3em" />
+            </div>
+
+            <!--Terceiro bloco de cod-->
+
+            <div class="form-row" style="margin-left: 68em; margin-top: -13.8em">
+                <label class="form-label"
+                       for="nome"
+                       style="color: var(--bs-light); margin-left: 0em">Cargo</label>
+                <input class="form-input"
+                       type="text"
+                       id="nome"
+                       name="nome"
+                       style="width: 15em; border-radius: 0.3em" />
+            </div>
+
+            <div class="form-row" style="margin-left: 68em">
+                <label class="form-label"
+                       for="nome"
+                       style="color: rgb(0, 0, 0); margin-left: 0em">Salário</label>
+                <input class="form-input"
+                       type="text"
+                       id="nome"
+                       name="nome"
+                       style="width: 15em; border-radius: 0.3em" />
+            </div>
+
+            <div class="form-row" style="margin-left: 68em; margin-top: 1.4em">
+                <input class="form-submit"
+                       type="submit"
+                       value="Cadastro"
+                       style="width: 15.8em; border-radius: 0.3em" />
+            </div>
+
+            <!--Botão voltar-->
+
+            <div class="form-row" style="margin-left: 0em; margin-top: -2em">
+                <input class="form-submit"
+                       type="submit"
+                       name="submitCreateButton"
+                       value="Voltar"
+                       style="width: 27.2em; border-radius: 0.3em" asp-page="/Home" />
+            </div>
+
+            <!--Cadastro do endereço-->
+
+            <div class="form-row" style="margin-left: 28em; margin-top: 10em">
+                <label class="form-label"
+                       for="nome"
+                       style="color: var(--bs-light); margin-left: 0em">CEP</label>
+                <input class="form-input"
+                       type="text"
+                       id="nome"
+                       name="nome"
+                       style="width: 15em; border-radius: 0.3em" />
+            </div>
+
+            <div class="form-row" style="margin-left: 28em">
+                <label class="form-label"
+                       for="nome"
+                       style="color: rgb(0, 0, 0); margin-left: 0em">Bairro</label>
+                <input class="form-input"
+                       type="text"
+                       id="nome"
+                       name="nome"
+                       style="width: 15em; border-radius: 0.3em" />
+            </div>
+
+            <!--Cadastro do endereço seg torre-->
+
+            <div class="form-row" style="margin-left: 48em; margin-top: -6.9em">
+                <label class="form-label"
+                       for="nome"
+                       style="color: var(--bs-light); margin-left: 0em">Cidade</label>
+                <input class="form-input"
+                       type="text"
+                       id="nome"
+                       name="nome"
+                       style="width: 15em; border-radius: 0.3em" />
+            </div>
+
+            <div class="form-row" style="margin-left: 48em">
+                <label class="form-label"
+                       for="nome"
+                       style="color: rgb(0, 0, 0); margin-left: 0em">Endereço</label>
+                <input class="form-input"
+                       type="text"
+                       id="nome"
+                       name="nome"
+                       style="width: 15em; border-radius: 0.3em" />
+            </div>
+
+            <div class="form-row" style="margin-left: 48em">
+                <label class="form-label"
+                       for="nome"
+                       style="color: rgb(0, 0, 0); margin-left: 0em">Complemento</label>
+                <input class="form-input"
+                       type="text"
+                       id="nome"
+                       name="nome"
+                       style="width: 15em; border-radius: 0.3em" />
+            </div>
+
+            <!--Cadastro do endereço terc torre-->
+
+            <div class="form-row" style="margin-left: 68em; margin-top: -10.5em">
+                <label class="form-label"
+                       for="nome"
+                       style="color: var(--bs-light); margin-left: 0em">Cidade</label>
+                <input class="form-input"
+                       type="text"
+                       id="nome"
+                       name="nome"
+                       style="width: 15em; border-radius: 0.3em" />
+            </div>
+
+            <div class="form-row" style="margin-left: 68em">
+                <label class="form-label"
+                       for="nome"
+                       style="color: rgb(0, 0, 0); margin-left: 0em">Endereço</label>
+                <input class="form-input"
+                       type="text"
+                       id="nome"
+                       name="nome"
+                       style="width: 15em; border-radius: 0.3em" />
+            </div>
+        </form>
     </div>
-
-    <div class="form-row" style="margin-left: 28em">
-      <label
-        class="form-label"
-        for="nome"
-        style="color: rgb(0, 0, 0); margin-left: 0em"
-        >Data de Nascimento</label
-      >
-      <input
-        class="form-input"
-        type="text"
-        id="nome"
-        name="nome"
-        required
-        style="width: 15em; border-radius: 0.3em"
-      />
-    </div>
-
-    <div class="form-row" style="margin-left: 28em">
-      <label
-        class="form-label"
-        for="nome"
-        style="color: rgb(0, 0, 0); margin-left: 0em"
-        >Gênero</label
-      >
-      <input
-        class="form-input"
-        type="text"
-        id="nome"
-        name="nome"
-        required
-        style="width: 15em; border-radius: 0.3em"
-      />
-    </div>
-
-    <div class="form-row" style="margin-left: 28em">
-      <label
-        class="form-label"
-        for="nome"
-        style="color: rgb(0, 0, 0); margin-left: 0em"
-        >RG</label
-      >
-      <input
-        class="form-input"
-        type="text"
-        id="nome"
-        name="nome"
-        required
-        style="width: 15em; border-radius: 0.3em"
-      />
-    </div>
-
-    <!--Segundo bloco de cod-->
-
-    <div class="form-row" style="margin-left: 48em; margin-top: -13.8em">
-      <label
-        class="form-label"
-        for="nome"
-        style="color: var(--bs-light); margin-left: 0em"
-        >CPF</label
-      >
-      <input
-        class="form-input"
-        type="text"
-        id="nome"
-        name="nome"
-        required
-        style="width: 15em; border-radius: 0.3em"
-      />
-    </div>
-
-    <div class="form-row" style="margin-left: 48em">
-      <label
-        class="form-label"
-        for="nome"
-        style="color: rgb(0, 0, 0); margin-left: 0em"
-        >Email</label
-      >
-      <input
-        class="form-input"
-        type="text"
-        id="nome"
-        name="nome"
-        required
-        style="width: 15em; border-radius: 0.3em"
-      />
-    </div>
-
-    <div class="form-row" style="margin-left: 48em">
-      <label
-        class="form-label"
-        for="nome"
-        style="color: rgb(0, 0, 0); margin-left: 0em"
-        >Estado civil</label
-      >
-      <input
-        class="form-input"
-        type="text"
-        id="nome"
-        name="nome"
-        required
-        style="width: 15em; border-radius: 0.3em"
-      />
-    </div>
-
-    <div class="form-row" style="margin-left: 48em">
-      <label
-        class="form-label"
-        for="nome"
-        style="color: rgb(0, 0, 0); margin-left: 0em"
-        >Telefone</label
-      >
-      <input
-        class="form-input"
-        type="text"
-        id="nome"
-        name="nome"
-        required
-        style="width: 15em; border-radius: 0.3em"
-      />
-    </div>
-
-    <!--Terceiro bloco de cod-->
-
-    <div class="form-row" style="margin-left: 68em; margin-top: -13.8em">
-      <label
-        class="form-label"
-        for="nome"
-        style="color: var(--bs-light); margin-left: 0em"
-        >Cargo</label
-      >
-      <input
-        class="form-input"
-        type="text"
-        id="nome"
-        name="nome"
-        required
-        style="width: 15em; border-radius: 0.3em"
-      />
-    </div>
-
-    <div class="form-row" style="margin-left: 68em">
-      <label
-        class="form-label"
-        for="nome"
-        style="color: rgb(0, 0, 0); margin-left: 0em"
-        >Salário</label
-      >
-      <input
-        class="form-input"
-        type="text"
-        id="nome"
-        name="nome"
-        required
-        style="width: 15em; border-radius: 0.3em"
-      />
-    </div>
-
-    <div class="form-row" style="margin-left: 68em; margin-top: 1.4em">
-      <input
-        class="form-submit"
-        type="submit"
-        value="Cadastro"
-        style="width: 15.8em; border-radius: 0.3em"
-      />
-    </div>
-
-    <!--Botão voltar-->
-
-    <div class="form-row" style="margin-left: 0em; margin-top: -2em">
-      <input
-        class="form-submit"
-        type="submit"
-        value="Voltar"
-        style="width: 27.2em; border-radius: 0.3em"
-      />
-    </div>
-
-    <!--Cadastro do endereço-->
-
-    <div class="form-row" style="margin-left: 28em; margin-top: 10em">
-      <label
-        class="form-label"
-        for="nome"
-        style="color: var(--bs-light); margin-left: 0em"
-        >CEP</label
-      >
-      <input
-        class="form-input"
-        type="text"
-        id="nome"
-        name="nome"
-        required
-        style="width: 15em; border-radius: 0.3em"
-      />
-    </div>
-
-    <div class="form-row" style="margin-left: 28em">
-      <label
-        class="form-label"
-        for="nome"
-        style="color: rgb(0, 0, 0); margin-left: 0em"
-        >Bairro</label
-      >
-      <input
-        class="form-input"
-        type="text"
-        id="nome"
-        name="nome"
-        required
-        style="width: 15em; border-radius: 0.3em"
-      />
-    </div>
-
-    <!--Cadastro do endereço seg torre-->
-
-    <div class="form-row" style="margin-left: 48em; margin-top: -6.9em">
-      <label
-        class="form-label"
-        for="nome"
-        style="color: var(--bs-light); margin-left: 0em"
-        >Cidade</label
-      >
-      <input
-        class="form-input"
-        type="text"
-        id="nome"
-        name="nome"
-        required
-        style="width: 15em; border-radius: 0.3em"
-      />
-    </div>
-
-    <div class="form-row" style="margin-left: 48em">
-      <label
-        class="form-label"
-        for="nome"
-        style="color: rgb(0, 0, 0); margin-left: 0em"
-        >Endereço</label
-      >
-      <input
-        class="form-input"
-        type="text"
-        id="nome"
-        name="nome"
-        required
-        style="width: 15em; border-radius: 0.3em"
-      />
-    </div>
-
-    <div class="form-row" style="margin-left: 48em">
-      <label
-        class="form-label"
-        for="nome"
-        style="color: rgb(0, 0, 0); margin-left: 0em"
-        >Complemento</label
-      >
-      <input
-        class="form-input"
-        type="text"
-        id="nome"
-        name="nome"
-        required
-        style="width: 15em; border-radius: 0.3em"
-      />
-    </div>
-
-    <!--Cadastro do endereço terc torre-->
-
-    <div class="form-row" style="margin-left: 68em; margin-top: -10.5em">
-      <label
-        class="form-label"
-        for="nome"
-        style="color: var(--bs-light); margin-left: 0em"
-        >Cidade</label
-      >
-      <input
-        class="form-input"
-        type="text"
-        id="nome"
-        name="nome"
-        required
-        style="width: 15em; border-radius: 0.3em"
-      />
-    </div>
-
-    <div class="form-row" style="margin-left: 68em">
-      <label
-        class="form-label"
-        for="nome"
-        style="color: rgb(0, 0, 0); margin-left: 0em"
-        >Endereço</label
-      >
-      <input
-        class="form-input"
-        type="text"
-        id="nome"
-        name="nome"
-        required
-        style="width: 15em; border-radius: 0.3em"
-      />
-    </div>
-  </div>
 </section>
+

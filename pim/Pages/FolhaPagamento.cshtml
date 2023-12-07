@@ -178,12 +178,12 @@
 
 <section id="formulario">
   <div class="form-container">
-    <form id="myForm">
+    <form id="myForm" method="post">
       <div
         class="form-row"
         style="margin-left: 0em; margin-top: 13em; width: 21.8em"
       >
-        <input class="form-submit" type="button" value="Voltar" />
+        <input class="form-submit" type="submit" name="submitFpButton" value="Voltar" asp-page="/Home" />
       </div>
 
       <div class="form-row" style="margin-left: 25em; margin-top: -5.5em">
@@ -198,7 +198,6 @@
           type="text"
           id="email"
           name="email"
-          required
           style="width: 27.2em; border-radius: 0.3em"
         />
       </div>
@@ -224,7 +223,6 @@
           type="text"
           id="nome"
           name="nome"
-          required
           style="width: 17em; border-radius: 0.3em"
         />
       </div>
@@ -241,7 +239,6 @@
           type="text"
           id="faltas"
           name="faltas"
-          required
           style="width: 17em; border-radius: 0.3em"
         />
       </div>
@@ -258,7 +255,6 @@
           type="text"
           id="inss"
           name="inss"
-          required
           style="width: 17em; border-radius: 0.3em"
         />
       </div>
@@ -277,7 +273,6 @@
           type="text"
           id="salario"
           name="salario"
-          required
           style="width: 17em; border-radius: 0.3em"
         />
       </div>
@@ -294,7 +289,6 @@
           type="text"
           id="atestado"
           name="atestado"
-          required
           style="width: 17em; border-radius: 0.3em"
         />
       </div>
@@ -311,7 +305,6 @@
           type="text"
           id="ferias"
           name="ferias"
-          required
           style="width: 17em; border-radius: 0.3em"
         />
       </div>
@@ -330,7 +323,6 @@
           type="text"
           id="atrasos"
           name="atrasos"
-          required
           style="width: 17em; border-radius: 0.3em"
         />
       </div>
@@ -347,7 +339,6 @@
           type="text"
           id="beneficios"
           name="beneficios"
-          required
           style="width: 17em; border-radius: 0.3em"
         />
       </div>
@@ -364,7 +355,6 @@
           type="text"
           id="decimoSalario"
           name="decimoSalario"
-          required
           style="width: 17em; border-radius: 0.3em"
         />
       </div>

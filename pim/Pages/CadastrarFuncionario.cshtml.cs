@@ -25,7 +25,14 @@ namespace pim.Pages
 
         public async Task<IActionResult> OnPostAsync()
         {
-            return RedirectToPage("./Home");
+             string submitButton = Request.Form["submitCreateButton"];
+
+            if (submitButton == "Voltar")
+            {
+                return RedirectToPage("./Home");
+            }
+
+            return Page();
         }
     }
 }

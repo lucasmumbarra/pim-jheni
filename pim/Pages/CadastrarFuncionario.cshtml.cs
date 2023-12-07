@@ -53,8 +53,24 @@ namespace pim.Pages
                 func.RG = pageCadastroFuncionario.Rg;
                 func.Nome = pageCadastroFuncionario.Nome;
                 func.Telefone = pageCadastroFuncionario.Telefone;
-                func.DataDemissao = DateTime.TryParseExact(
-                    pageCadastroFuncionario.DataDemissao, "dd/MM/yyyy", null, DateTimeStyles.None, out DateTime result);
+                func.DataNascimento = DateTime.ParseExact(pageCadastroFuncionario.DataNascimento, "dd/MM/yyyy", null);
+                func.CPF = pageCadastroFuncionario.Cpf;
+                func.DataAdmissao = DateTime.Now;
+                func.DataDemissao = null;
+                func.Email = pageCadastroFuncionario.Email;
+                func.EnderecoId = endereco.Id;
+                func.CargoId = cargo.Id;
+                func.GeneroId = genero.Id;
+
+                _context.Add(func);
+                await _context.SaveChangesAsync();
+
+                if (func.Id != null)
+                {
+                    
+
+                    return RedirectToPage("./Home");
+                }
             }
 
             return Page();

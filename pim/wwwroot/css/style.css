@@ -13901,15 +13901,30 @@ fieldset:disabled .btn {
 .form-container {
     position: relative;
     display: flex;
-    margin-top: 20em;
-    margin-left: 3em;
+    margin-top: 25em;
+    margin-left: 9em;
 }
 
 .form-container2 {
     position: relative;
     display: flex;
-    margin-top: 20em;
-    margin-left: 3em;
+    margin-top: 7em;
+    margin-left: 5em;
+}
+
+.form-container3 {
+    position: relative;
+    display: flex;
+    margin-top: 5em;
+    margin-left: 9em;
+}
+
+.gamb {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 5em;
+    margin-top: -3em;
 }
 
 .form-header {

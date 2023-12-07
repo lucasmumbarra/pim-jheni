@@ -34,15 +34,18 @@ namespace pim.Pages
 
             if (submitButton == "Gerar Folha")
             {
-                Fp.Nome = "teste";
-                Fp.Salario = decimal.Parse("0.00");
-                Fp.Faltas = "teste";
-                Fp.INSS = "teste";
-                Fp.Atestado = "teste";
-                Fp.Ferias = "teste";
-                Fp.Atrasos = "teste";
-                Fp.Beneficios = "teste";
-                Fp.DecimoSalario = "teste";
+                var cf = await _context.CadastroFuncionario.FirstOrDefaultAsync(x => x.Email == Fp.Email);
+                var salario = await _context.Salario.FirstOrDefaultAsync(x => x.Id == 1);
+
+                Fp.Nome = cf.Nome;
+                Fp.Salario = salario.ValorSalario;
+                Fp.Faltas = "0";
+                Fp.INSS = Math.Round((salario.ValorSalario / 100) * decimal.Parse("11.28")).ToString();
+                Fp.Atestado = "0";
+                Fp.Ferias = "0";
+                Fp.Atrasos = "0";
+                Fp.Beneficios = "600.00";
+                Fp.DecimoSalario = salario.ValorSalario.ToString();
             }
 
             return Page();
